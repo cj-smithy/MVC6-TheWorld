@@ -14,7 +14,8 @@ namespace TheWorld
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
-            // middleware is functionality that is accessed when a request comes in...
+            // middleware is functionality that is accessed when a request comes in... It's opted into, not default behaviour.
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             
             //app.Run(async (context) =>
