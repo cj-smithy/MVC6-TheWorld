@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Builder;
+﻿using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
-using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
-using System.Threading;
 
 namespace TheWorld
 {
@@ -20,6 +14,9 @@ namespace TheWorld
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
+            // middleware is functionality that is accessed when a request comes in...
+            app.UseStaticFiles();
+            
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync($"Hello World! {context.Request.Path}");
