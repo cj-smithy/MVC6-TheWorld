@@ -18,6 +18,10 @@ input[type=submit] {
     width: auto;
 }
 
+a:link, a:visited {
+    color: azure;
+}
+
 #main {
     background-color: #eee;
     padding: 4px;
